@@ -13,10 +13,22 @@ This portfolio showcases product analytics work including player behaviour analy
 
 ## ⭐️ Cases
 
-*Coming soon*
+### [Case 01 — Coming Soon]()
+> *In progress*
+
+---
+
+### [Case 02 — Player Churn & Engagement Analysis](case-02-player-churn-engagement/README.md)
+Analysis of 40,000+ player records to identify key churn drivers and behavioral engagement patterns.
+> Tools: SQL · Tableau Public
+> Dataset: 40,034 players | 13 variables | Online Gaming Behavior
+
+🔗 [View Dashboard](https://public.tableau.com/views/iGamingPlayerChurnEngagementAnalysis40KPlayers/Dashboard1)
 
 ---
 
 ## ⭐️ Dashboards Preview
 
-*Coming soon*
+| Case | Dashboard |
+|---|---|
+| Player Churn & Engagement | [![preview](case-02-player-churn-engagement/dashboards/player-churn-engagement.png)](https://public.tableau.com/views/iGamingPlayerChurnEngagementAnalysis40KPlayers/Dashboard1) |
