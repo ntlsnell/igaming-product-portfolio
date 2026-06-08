@@ -31,9 +31,19 @@ Analysis of 40,000+ player records to identify key churn drivers and behavioral 
 
 ---
 
+### [Case 03 — Single Player Behaviour Analysis](case-03-single-player-behaviour/README.md)
+Deep-dive analysis of a single player's complete transaction history — 156,672 transactions across 21 months covering game preferences, session patterns, and financial performance.
+> Tools: SQL · Tableau Public
+> Dataset: 156,672 transactions | 1 player | February 2024 – November 2025 | CAD
+
+🔗 [View Dashboard](https://public.tableau.com/views/iGamingSinglePlayerBehaviourAnalysis/Dashboard1)
+
+---
+
 ## ⭐️ Dashboards Preview
 
 | Case | Dashboard |
 |---|---|
 | Connecticut iGaming Revenue | [![preview](case-01-connecticut-igaming-revenue/dashboards/connecticut-igaming-revenue.png)](https://public.tableau.com/views/ConnecticutiGamingRevenueAnalysis20212024/Dashboard1) |
 | Player Churn & Engagement | [![preview](case-02-player-churn-engagement/dashboards/player-churn-engagement.png)](https://public.tableau.com/views/iGamingPlayerChurnEngagementAnalysis40KPlayers/Dashboard1) |
+| Single Player Behaviour | [![preview](case-03-single-player-behaviour/dashboards/single-player-behaviour.png)](https://public.tableau.com/views/iGamingSinglePlayerBehaviourAnalysis/Dashboard1) |
