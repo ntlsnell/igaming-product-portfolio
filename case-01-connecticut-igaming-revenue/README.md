@@ -34,5 +34,6 @@ Analysis of Connecticut's regulated online casino gaming market from October 202
 4. Monthly GGR Trend — seasonality and holiday effect
 
 ## ✨ Dataset
-Source: Connecticut Department of Consumer Protection — Official Online Casino Gaming Reports
+Source: [Casino Gaming Data — Kaggle](https://www.kaggle.com/datasets/willianoliveiragibin/casino-gaming-data)
 Records: 142 monthly records | 4 licensees | October 2021 – November 2024
+Original data: Connecticut Department of Consumer Protection — Official Online Casino Gaming Reports
