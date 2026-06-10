@@ -40,6 +40,15 @@ Deep-dive analysis of a single player's complete transaction history — 156,672
 
 ---
 
+### [Case 04 — RFM Player Segmentation](case-04-rfm-player-segmentation/README.md)
+RFM segmentation of 40,034 players into four value segments — Champions, Loyal Players, At Risk, Lost — identifying behavioural drivers of player value, retention risks, and win-back opportunities.
+> Tools: SQL · Tableau Public
+> Dataset: 40,034 players | 13 variables | 4 RFM segments
+
+🔗 [View Dashboard](https://public.tableau.com/views/iGamingRFMPlayerSegmentation40KPlayers/Dashboard1)
+
+---
+
 ## ⭐️ Dashboards Preview
 
 | Case | Dashboard |
@@ -47,3 +56,4 @@ Deep-dive analysis of a single player's complete transaction history — 156,672
 | Connecticut iGaming Revenue | [![preview](case-01-connecticut-igaming-revenue/dashboards/connecticut-igaming-revenue.png)](https://public.tableau.com/views/ConnecticutiGamingRevenueAnalysis20212024/Dashboard1) |
 | Player Churn & Engagement | [![preview](case-02-player-churn-engagement/dashboards/player-churn-engagement.png)](https://public.tableau.com/views/iGamingPlayerChurnEngagementAnalysis40KPlayers/Dashboard1) |
 | Single Player Behaviour | [![preview](case-03-single-player-behaviour/dashboards/single-player-behaviour.png)](https://public.tableau.com/views/iGamingSinglePlayerBehaviourAnalysis/Dashboard1) |
+| RFM Player Segmentation | [![preview](case-04-rfm-player-segmentation/dashboards/rfm-player-segmentation.png)](https://public.tableau.com/views/iGamingRFMPlayerSegmentation40KPlayers/Dashboard1) |
