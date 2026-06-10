@@ -1,87 +1,35 @@
-# ✨ Case 04 — RFM Player Segmentation
-
-Segmentation of **40,034 players** using an adapted RFM framework to identify high-value players, retention risks, and win-back opportunities.
-
----
-
-## 🎯 Business Question
-
-Which players drive the most value, who is about to churn, and where should retention budget go first?
-
----
-
-## 📊 Dataset
-
-- **Source:** [Online Gaming Behavior Dataset (Kaggle)](https://www.kaggle.com/datasets/rabieelkharoua/predict-online-gaming-behavior-dataset)
-- **Size:** 40,034 players × 13 columns
-- Demographics, engagement level, session frequency, player level, in-game purchases
-
----
-
-## 🔢 RFM Methodology
-
-Classic RFM adapted to gaming behavior data:
-
-| Component | Proxy | Scoring |
-|---|---|---|
-| **R** — Recency | EngagementLevel | High = 3, Medium = 2, Low = 1 |
-| **F** — Frequency | SessionsPerWeek | ≥10 = 3, ≥4 = 2, else = 1 |
-| **M** — Monetary | PlayerLevel + InGamePurchases | Level ≥67 & Purchase = 3, Level ≥33 = 2, else = 1 |
-
-**Segments by total RFM score:** Champions ≥8 · Loyal Players 6–7 · At Risk 4–5 · Lost Players ≤3
-
----
-
-## 👥 Segment Profiles
-
-| Segment | Players | Share | Avg Sessions/Week | Purchase Rate |
-|---|---|---|---|---|
-| 🏆 Champions | 6,990 | 17.46% | 14.99 | 27.97% |
-| 🔶 Loyal Players | 19,533 | 48.79% | 11.31 | 18.90% |
-| ⚠️ At Risk | 11,388 | 28.45% | 4.47 | 17.39% |
-| ⬜ Lost Players | 2,123 | 5.30% | 1.28 | 19.55% |
-
----
-
-## 💡 Key Insights
-
-- **Champions are 17.5% of the base but purchase at 27.97%** — nearly 1.5× the average. Protecting this segment is the highest-ROI retention play.
-- **Almost half the base (48.79%) are Loyal Players** — one step below Champions. Moving even a fraction of them up the ladder compounds revenue.
-- **At Risk players (28.45%) average only 4.47 sessions/week** — the natural target for re-engagement campaigns before they slide into Lost.
-- **Lost Players' purchase rate (19.55%) is *higher* than At Risk (17.39%)** — these are players who paid but stopped playing. A win-back campaign has real monetary upside here.
-- **Geography does not predict player value** — segment shares vary by less than 1.5 p.p. across Asia, Europe, USA, and Other. Echoes Case 02: demographics don't drive churn either.
-- **Genre mix is nearly identical across segments** — value is driven by behavioral frequency and engagement, not game preference or location.
-
----
-
-## 📈 Dashboard
-
-**Live:** [iGaming RFM Player Segmentation — 40K Players (Tableau Public)](https://public.tableau.com/views/iGamingRFMPlayerSegmentation40KPlayers/Dashboard1)
-
-![RFM Player Segmentation Dashboard](dashboards/rfm-player-segmentation.png?raw=true)
-
-| # | Chart | Type | What it shows |
-|---|---|---|---|
-| 1 | Player Distribution by Segment & Session Frequency | Stacked Bar | How session activity splits across segments — Lost/At Risk dominate 0–3 sessions, Champions take over from 10+ |
-| 2 | Segment Profile — Sessions & Purchase Rate | Bar (+ Tooltip) | Avg sessions per segment, purchase rate on hover |
-| 3 | Segment Distribution by Location | 100% Stacked Bar | Segment shares are flat across all regions |
-| 4 | Segment Distribution by Game Genre | Treemap | Genre preferences are proportional in every segment |
-
----
-
-## 🗂️ SQL Files
-
-| File | Purpose |
-|---|---|
-| `01_rfm_scores.sql` | Calculates R, F, M scores per player |
-| `02_rfm_segments.sql` | Assigns players to 4 segments by total RFM score |
-| `03_segment_profile.sql` | Aggregates segment-level metrics (sessions, purchase rate, age, level) |
-| `04_segment_by_genre.sql` | Cross-tabulates segments by game genre |
-
----
-
-## 🛠️ Tools
-
-- **SQLite** (DB Browser) — RFM scoring & segmentation
-- **Tableau Public** — dashboard
-- **GitHub** — portfolio hosting
+# Case 04 — RFM Player Segmentation
+## ✨ Dashboard
+[![Dashboard Preview](https://github.com/ntlsnell/igaming-product-portfolio/blob/main/case-04-rfm-player-segmentation/dashboards/rfm-player-segmentation.png?raw=true)](https://public.tableau.com/views/iGamingRFMPlayerSegmentation40KPlayers/Dashboard1)
+🔗 [View Live Interactive Dashboard on Tableau Public](https://public.tableau.com/views/iGamingRFMPlayerSegmentation40KPlayers/Dashboard1)
+## ✨ Business Context
+RFM segmentation of 40,034 players from an online gaming platform — identifying high-value players, retention risks, and win-back opportunities. Classic RFM methodology adapted to gaming behaviour data: engagement level as Recency, session frequency as Frequency, and player level combined with in-game purchases as Monetary. Players are scored 1–3 on each dimension and grouped into 4 actionable segments.
+## ✨ RFM Methodology
+- **R (Recency)** → EngagementLevel: High = 3, Medium = 2, Low = 1
+- **F (Frequency)** → SessionsPerWeek: ≥10 = 3, ≥4 = 2, else = 1
+- **M (Monetary)** → PlayerLevel + InGamePurchases: Level ≥67 & Purchase = 3, Level ≥33 = 2, else = 1
+- **Segments by total score**: Champions ≥8 | Loyal Players 6–7 | At Risk 4–5 | Lost Players ≤3
+## ✨ Key Insights
+- **Champions — 6,990 players (17.46%)** — 14.99 sessions/week and 27.97% purchase rate, nearly 1.5× the base average
+- **Loyal Players — 19,533 players (48.79%)** — almost half the base sits one step below Champions, the core upsell opportunity
+- **At Risk — 11,388 players (28.45%)** — only 4.47 sessions/week, prime target for re-engagement before sliding into Lost
+- **Lost Players' purchase rate (19.55%) is higher than At Risk (17.39%)** — these players paid but stopped playing, strong win-back potential
+- **Geography does not predict player value** — segment shares vary by less than 1.5 p.p. across Asia, Europe, USA and Other
+- **Genre mix is nearly identical across segments** — player value is driven by behavioural frequency, not game preference
+## ✨ Tools Used
+- SQL (SQLite) — RFM scoring, segmentation, segment profiling
+- Tableau Public — interactive dashboard with 4 visualizations
+- GitHub — version control and portfolio hosting
+## ✨ SQL Queries
+- [RFM Scores Calculation](sql/01_rfm_scores.sql)
+- [RFM Segments Assignment](sql/02_rfm_segments.sql)
+- [Segment Profile Aggregation](sql/03_segment_profile.sql)
+- [Segments by Game Genre](sql/04_segment_by_genre.sql)
+## ✨ Visualizations
+1. Player Distribution by Segment & Session Frequency — stacked bar chart, session activity 0–19 coloured by segment
+2. Segment Profile — Sessions & Purchase Rate — bar chart with purchase rate in tooltip
+3. Segment Distribution by Location — 100% stacked bar across Asia, Europe, USA, Other
+4. Segment Distribution by Game Genre — treemap sized by player count, coloured by segment
+## ✨ Dataset
+Source: [Predict Online Gaming Behavior Dataset — Kaggle](https://www.kaggle.com/datasets/rabieelkharoua/predict-online-gaming-behavior-dataset)
+Records: 40,034 players | 13 columns | 4 RFM segments
