@@ -49,6 +49,15 @@ RFM segmentation of 40,034 players into four value segments — Champions, Loyal
 
 ---
 
+### [Case 05 — Bonus & Deposit Behaviour Analysis](case-05-bonus-deposit-behaviour/README.md)
+Deposit trigger analysis across a 21-month player history — the welcome bonus generated 0.03% of betting activity, while 52.5% of deposits happen at a busted balance. Deposits are play-continuation events, not bonus responses.
+> Tools: SQL · Tableau Public
+> Dataset: 156,672 transactions | 219 deposits | February 2024 – November 2025 | CAD
+
+🔗 [View Dashboard](https://public.tableau.com/views/iGamingBonusDepositBehaviourAnalysis/Dashboard1)
+
+---
+
 ## ⭐️ Dashboards Preview
 
 | Case | Dashboard |
@@ -57,3 +66,4 @@ RFM segmentation of 40,034 players into four value segments — Champions, Loyal
 | Player Churn & Engagement | [![preview](case-02-player-churn-engagement/dashboards/player-churn-engagement.png)](https://public.tableau.com/views/iGamingPlayerChurnEngagementAnalysis40KPlayers/Dashboard1) |
 | Single Player Behaviour | [![preview](case-03-single-player-behaviour/dashboards/single-player-behaviour.png)](https://public.tableau.com/views/iGamingSinglePlayerBehaviourAnalysis/Dashboard1) |
 | RFM Player Segmentation | [![preview](case-04-rfm-player-segmentation/dashboards/rfm-player-segmentation.png)](https://public.tableau.com/views/iGamingRFMPlayerSegmentation40KPlayers/Dashboard1) |
+| Bonus & Deposit Behaviour | [![preview](case-05-bonus-deposit-behaviour/dashboards/bonus-deposit-behaviour.png)](https://public.tableau.com/views/iGamingBonusDepositBehaviourAnalysis/Dashboard1) |
