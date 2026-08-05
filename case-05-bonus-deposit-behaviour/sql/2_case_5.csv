@@ -1,0 +1,6 @@
+deposit_trigger,deposits,pct_of_deposits,avg_deposit,total_deposited
+0. First deposit,1,0.5,50.0,50.0
+1. Busted balance (< $1),115,52.5,20.83,2395.0
+2. Mid-play reload ($1+),3,1.4,19.0,57.0
+3. After withdrawal/payment,43,19.6,22.05,948.0
+4. Consecutive top-up,57,26.0,20.79,1185.0
